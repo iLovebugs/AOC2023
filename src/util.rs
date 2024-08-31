@@ -43,7 +43,7 @@ pub fn string_to_uint(input: &str) -> u32 {
     let mut result : u32 = 0;
     let mut pos    : u32 = 0;
 
-    for c in input.chars() {
+    for c in input.chars().rev() {
         match c.to_digit(10_u32) {
             Some(number_10) => {
                 result = result.saturating_add(number_10.saturating_mul(10_u32.saturating_pow(pos)));
