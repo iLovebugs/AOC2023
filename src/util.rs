@@ -73,3 +73,15 @@ pub fn text_to_char_num (input : &str) -> String {
 
     output
 }
+
+pub fn is_special_char (input : &char) -> bool {
+
+    let special_char : Vec<char> = vec!['*', '#', '+', '-', '%', '$', '@', '/', '=', '&'];
+
+    if special_char.contains(input) {
+        true
+    }
+    else {
+        false
+    }
+}
